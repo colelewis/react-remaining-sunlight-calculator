@@ -6,4 +6,6 @@ To use:
 * `npm install`
 * `expo start -w`
 
+Calculations are done using [SunCalc](https://github.com/mourner/suncalc).
+
 The web page should now appear in your browser and ready for use!
