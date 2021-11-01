@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import SunCalc from 'suncalc';
-import './assets/css/index.css';
+//import './assets/css/index.css';
 
 export default function Droplet() {
-
+  
   const prettyMilliseconds = require('pretty-ms');
 
   function formatSunsetTimeDifference(timeDifference) {
@@ -55,15 +55,15 @@ export default function Droplet() {
     if (latitude == 0 || longitude == 0) {
       return (
         <div>
-          <input placeholder="latitude" onChange={e => setLatitude(e.target.value)} />
-          <input placeholder="longitude" onChange={e => setLongitude(e.target.value)} />
+          <TextInput placeholder="latitude" onChange={e => setLatitude(e.target.value)} />
+          <TextInput placeholder="longitude" onChange={e => setLongitude(e.target.value)} />
         </div>
       );
     } else {
       return (
         <div>
-          <input placeholder="latitude" onChange={e => setLatitude(e.target.value)} />
-          <input placeholder="longitude" onChange={e => setLongitude(e.target.value)} />
+          <TextInput placeholder="latitude" onChange={e => setLatitude(e.target.value)} />
+          <TextInput placeholder="longitude" onChange={e => setLongitude(e.target.value)} />
               <View style ={styling.subcontainer}>
                 <Text style={styling.subtext}>The Sun will set at {times.sunset.toUTCString()} for the given location!{"\n"}</Text>
                 <Text style={styling.subtext}>This will occur at {times.sunset.toLocaleTimeString()} in your time!{"\n"}</Text>
@@ -71,7 +71,7 @@ export default function Droplet() {
                   {formatSunsetTimeDifference(timeDifference)}
                 </Text>
               </View>
-          </div>
+        </div>
       );
     }
   }
@@ -107,16 +107,16 @@ const styling = StyleSheet.create({
     marginTop: 3,
     marginBottom: 11,
     padding: 6,
-    fontFamily: 'OpenSansLight',
+    fontFamily: 'Helvetica',
     fontSize: 22,
   },
   subtext: {
-    fontFamily: 'OpenSansLight',
+    fontFamily: 'Helvetica',
     fontSize: 19,
     padding: 20,
   },
   header: {
-    fontFamily: 'OpenSansLight',
+    fontFamily: 'Helvetica',
     fontSize: 55,
     marginBottom: 20,
     fontWeight: 'bold',
