@@ -9,3 +9,6 @@ To use:
 Calculations are done using [SunCalc](https://github.com/mourner/suncalc).
 
 The web page should now appear in your browser and ready for use!
+
+# NOTE:
+## This repository is now defunct. Please refer to the currently maintained and more current [RRSC](https://github.com/colelewis/rrsc).
